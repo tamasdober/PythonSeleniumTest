@@ -10,3 +10,8 @@ project/tests/rest/__pycache__/
 project/tests/rest/automation.log
 project/utilities/__pycache__/
 project/tests/ui/.pytest_cache/
+project/pom/__pycache__/
+project/pom/explore/__pycache__/
+project/pom/explore/locators/__pycache__/
+project/pom/explore/pages/__pycache__/
+project/tests/ui/__pycache__/
