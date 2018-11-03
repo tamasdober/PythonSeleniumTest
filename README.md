@@ -24,7 +24,7 @@ The third package, utilities is to provide methods to get Hash-based message aut
 ABOUT THE TESTS
 ================
 
-The third package is about the actual tests. 
+The second package is about the actual tests. 
 Every test class has some setup with some ChromeOptions, which has been necessary when running the tests from the Docker container (for the VNC functionality).
 Also here we do the login, using values, passed in as environment variables.
 The tests try to provide context via comments and docstrings.
