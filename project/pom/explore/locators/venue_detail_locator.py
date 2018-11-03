@@ -15,7 +15,7 @@ class VenueDetailLocators:
     TIME_ZONE = (By.XPATH, "//*[@id='previewForm']//td[text()='Time Zone:']/following-sibling::td")
     HOURS_OF_OPERATION = (
         By.XPATH, "//*[@id='previewForm']//td[text()='Hours of Operation:']/following-sibling::td//td")
-    HILTON_CATEGORIES = (By.XPATH, "//*[@id='previewForm']//td[text()='Hilton Categories:']/following-sibling::td")
+    PROJECT_CATEGORIES = (By.XPATH, "//*[@id='previewForm']//td[text()='Hilton Categories:']/following-sibling::td")
     AVAILABLE_FEATURES = (By.XPATH, "//*[@id='previewForm']//td[text()='Available Features:']/following-sibling::td")
     UNAVAILABLE_FEATURES = (
         By.XPATH, "//*[@id='previewForm']//td[text()='Unavailable Features:']/following-sibling::td")

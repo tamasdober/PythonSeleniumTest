@@ -12,7 +12,7 @@ class RestBaseTestCase(unittest.TestCase):
     When using this class:
     - Always add env dependencies in the main docstring.
     - Always verify the response.status_code
-    - When expecting error, always verify the Exception (like HMSSecurityUnauthorizedHMACException,
+    - When expecting error, always verify the Exception (like ProjectSecurityUnauthorizedHMACException,
     InvalidMemberAuthException etc.)  and the ErrorCode
     """
     log = custom_logger(logging.DEBUG)

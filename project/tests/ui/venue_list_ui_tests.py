@@ -35,7 +35,6 @@ class VenueListTests(TestCase):
         self.venue_list_page = VenueListPage(self.driver, self.base_path)
         self.venue_list_page.load()
 
-    # TODO: click into the filter text field so that they'd become focused
     @parameterized.expand([
         [lambda venue_list_page: venue_list_page.get_warning_message.text],
         [lambda venue_list_page: venue_list_page.show_x_entries.text],
@@ -51,7 +50,7 @@ class VenueListTests(TestCase):
         This test is parameterized to significantly decrease code duplication.
         Will test various attributes in the venue detail page.
         :param actual: A lambda function that will take the venue detail page as an argument and return an attribute
-                        (i.e. venue name, phone number, hilton categories)
+                        (i.e. venue name, phone number, project categories)
                         If it returns none, an empty string, or an empty list, it will evaluate to false and fail.
         """
         print(actual(self.venue_list_page))
@@ -61,7 +60,7 @@ class VenueListTests(TestCase):
         categories_elements = self.venue_list_page.get_categories
         categories_text = [category.text for category in categories_elements]
         self.assertListEqual(categories_text,
-                             ["ID", "Name", "City", "Zip Code", "Recs", "Favorites", "Hilton Categories",
+                             ["ID", "Name", "City", "Zip Code", "Recs", "Favorites", "Project Categories",
                               "Excluded", ""])
 
     def test_filter_city_search_box(self):
@@ -92,7 +91,7 @@ class VenueListTests(TestCase):
 
     def test_incomplete_search_term_filter_city(self):
         """
-        Tests HMS-4830 where it was modified to make name and city 'equals' instead of 'like' regarding search.
+         Will test that it was modified to make name and city 'equals' instead of 'like' regarding search.
         """
         city_search = self.venue_list_page.filter_search_box(VenueListPage.VenueCategoryField.CITY)
 

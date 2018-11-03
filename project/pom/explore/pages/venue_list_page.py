@@ -15,7 +15,7 @@ class VenueListPage(BasePage):
         ZIP_CODE = 4
         RECS = 5
         FAVORITES = 6
-        HILTON_CATEGORIES = 7
+        PROJECT_CATEGORIES = 7
         EXCLUDED = 8
         EDIT = 9
 

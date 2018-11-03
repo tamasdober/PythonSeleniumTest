@@ -58,8 +58,8 @@ class VenueDetailPage(BasePage):
         return self.driver.find_elements(*VenueDetailLocators.HOURS_OF_OPERATION)
 
     @property
-    def hilton_categories(self):
-        return self.driver.find_element(*VenueDetailLocators.HILTON_CATEGORIES)
+    def project_categories(self):
+        return self.driver.find_element(*VenueDetailLocators.PROJECT_CATEGORIES)
 
     @property
     def available_features(self):

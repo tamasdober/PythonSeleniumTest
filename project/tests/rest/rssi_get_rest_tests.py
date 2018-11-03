@@ -1,7 +1,7 @@
 from os import environ
 import pprint
 from project.tests.rest.rest_base_test_case import RestBaseTestCase
-from project.utilities.rest import HMSTokenClient
+from project.utilities.rest import TokenClient
 
 
 class RssiGetRestTests(RestBaseTestCase):
@@ -14,8 +14,8 @@ class RssiGetRestTests(RestBaseTestCase):
     @classmethod
     def setUpClass(cls):
         cls.base_path = environ.get("base_path")
-        cls.client = HMSTokenClient(environ.get("console_username"), environ.get("console_password"),
-                                    cls.base_path)
+        cls.client = TokenClient(environ.get("console_username"), environ.get("console_password"),
+                                 cls.base_path)
 
         cls.device_id_android = 'Droid_PRODUCTION'
         cls.device_id_ios = '4b21428e503a7c8b8ed298c4da2cad2b71b19c43'
@@ -102,8 +102,8 @@ class RssiGetRestTests(RestBaseTestCase):
                                                         400)
         pprint.pprint(response_json)
 
-        # We expect HMSException exception
-        self.assert_response_json_error_validation(response_json, 'HMSException', '-1')
+        # We expect ProjectException exception
+        self.assert_response_json_error_validation(response_json, 'ProjectException', '-1')
 
     def test_rssi_get_no_device_bad_request(self):
         self.client.authenticate()
@@ -116,5 +116,5 @@ class RssiGetRestTests(RestBaseTestCase):
                                                         400)
         pprint.pprint(response_json)
 
-        # We expect HMSException exception
-        self.assert_response_json_error_validation(response_json, 'HMSException', '-1')
+        # We expect ProjectException exception
+        self.assert_response_json_error_validation(response_json, 'ProjectException', '-1')

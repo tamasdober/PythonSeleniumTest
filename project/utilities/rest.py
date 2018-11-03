@@ -5,10 +5,10 @@ import requests
 TOKEN_DURATION_MINUTES = 15
 
 
-class HMSTokenClient:
+class TokenClient:
     """
     This is a lightweight client used to retrieve various credentials needed to
-    make rest calls against HMS endpoints. All tokens are returned in Token wrapper objects.
+    make rest calls against Project endpoints. All tokens are returned in Token wrapper objects.
     """
 
     @property
