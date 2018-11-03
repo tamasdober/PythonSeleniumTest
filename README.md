@@ -20,3 +20,13 @@ For this, a base page is being provided for both types (UI & REST) of tests, to 
 The project consists of three main packages: pom, tests and utilities.
 The first one further divided into locators and pages, by areas of functionality - thus the CSS, Xpath etc. selector data got separated in order to provide clean code about the actual pages.
 The third package, utilities is to provide methods to get Hash-based message authentication code (HMAC) by accessing some debug pages.
+
+ABOUT THE TESTS
+================
+
+The third package is about the actual tests. 
+Every test class has some setup with some ChromeOptions, which has been necessary when running the tests from the Docker container (for the VNC functionality).
+Also here we do the login, using values, passed in as environment variables.
+The tests try to provide context via comments and docstrings.
+A useful solution to verify that all expected UI elements do exists is to have parameterized testing (see VenueListTests).
+There is also an attempt to provide a wait functionality for Ajax calls on some jQuery pages.

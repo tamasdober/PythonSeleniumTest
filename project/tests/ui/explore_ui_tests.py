@@ -110,7 +110,7 @@ class ExploreUITests(TestCase):
         user_detail.load()
         time.sleep(2)
         user_detail.inactivate_team_member.click()
-        user_detail.accept_inactivation_alert()  # When accepting the inactivation you should be returned to the admin list
+        user_detail.accept_inactivation_alert()  # When accepting inactivation you should be returned to the admin list
         page.load()
         ajax_wait(10, 10, self.driver, False)
         # Load the admin list page
@@ -153,7 +153,7 @@ class ExploreUITests(TestCase):
 
     def test_recommendations_not_editable_on_inactive(self):
         """
-        This will test that an inactive member is not able to have their recommendations saved to a new state any further
+        Testing that an inactive member is not able to have their recommendations saved to a new state any further
         """
         team_member_list_page = ExploreTeamMemberListPage(self.driver, self.base_path)
         self.create_user(team_member_list_page, self.user_with_imports)
